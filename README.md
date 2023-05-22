@@ -3,7 +3,7 @@
 I'm a dedicated self-learner on a continuous journey of growth, passionate about technology, and driven by curiosity. Here's a glimpse into my diverse skills and interests:
 
 **Languages:**
-- Proficient in: C++, C, C#, Java, ASM86, VB.net
+- Proficient in: C++, C, C#, Java, ASM86(~), VB.net
 - Strong foundation in software development, always expanding my skills and exploring new programming languages.
 
 **Areas of Expertise:**
