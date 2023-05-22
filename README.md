@@ -20,7 +20,3 @@ I'm a dedicated self-learner on a continuous journey of growth, passionate about
 - Exploring the potential of quantum computing and its application to AI.
 - Goal: Creating advanced systems that can make informed decisions with human oversight.
 - Objective: Drive the frontiers of automation and revolutionize the way we interact with technology.
-
-Join me on this exciting journey as we shape the dynamic world of intelligent machines! Let's connect and collaborate on innovative projects that push boundaries and make a meaningful impact. Feel free to explore my repositories and reach out for any exciting opportunities or discussions. 🌟
-
-*Let's code, create, and inspire! 🎉*
