@@ -1,13 +1,14 @@
 **👋 Welcome to my GitHub profile! 🚀**
 
 **Languages:**
-- Proficient in: C++, C, C#, Java, ASM86(~), VB.net
-- Strong foundation in software development, always expanding my skills and exploring new programming languages.
+- Proficient in: C++, C, C#, Java
+- Has knowledge in: ASM86, VB.net
+- Always expanding my skills and exploring new programming languages.
 
 **Areas of Expertise:**
 - Software development: Creating practical solutions with cutting-edge sensor technologies and seamless integration with LAN-connected devices.
 - Game development: Blending artistry and technical skills to design captivating 3D environments.
-- Music composition: Expressing creativity through harmonious melodies using the piano and FL Studio.
+- Music composition: Expressing emotions through harmonious melodies using piano.
 
 **Passion for Artificial Intelligence and Machine Learning:**
 - Fascinated by the potential of machines making autonomous decisions.
