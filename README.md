@@ -3,7 +3,7 @@
 **Languages:**
 - Proficient in: C++, C, C#, Java, Lua, Python
 - Has knowledge in: ASM86, VB.net
-- Always expanding my skills and exploring new programming languages.
+> Always expanding my skills and exploring new programming languages.
 
 **Areas of Expertise:**
 - Software development: Creating practical solutions with cutting-edge sensor technologies and seamless integration with LAN-connected devices.
