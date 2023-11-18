@@ -1,7 +1,7 @@
 **👋 Welcome to my GitHub profile! 🚀**
 
 **Languages:**
-- Proficient in: C++, C, C#, Java, Lua, Python
+- Proficient in: C++, C, C#, Java, Lua, Python, Node.js
 - Has knowledge in: ASM86, VB.net
 > Always expanding my skills and exploring new programming languages.
 
