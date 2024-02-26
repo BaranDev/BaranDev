@@ -92,9 +92,12 @@
   </tr>
 </table>
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=barandev&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&disable_animations=false&theme=synthwave&locale=en&hide_border=false" height="150" alt="stats graph"  />
-<img src="https://github.com/BaranDev/BaranDev/assets/67805576/1c60c761-822d-407a-b6b9-03dd5537cd52" height="150" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=barandev&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=synthwave&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=barandev&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&disable_animations=false&theme=synthwave&locale=en&hide_border=false" width="280" alt="stats graph"  />
+<img src="https://github.com/BaranDev/BaranDev/assets/67805576/1c60c761-822d-407a-b6b9-03dd5537cd52" height="135" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=barandev&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=synthwave&hide_border=false" width="280" height="115" alt="languages graph"  />
+</div>
+<div align="center">
+   <p><i><sup>lectures</sup></i></p>
 </div>
 
 <br clear="both">
@@ -122,3 +125,7 @@
 ###
 
 ###
+
+<div>
+  <p align="right"><sup><sup>🎨 All rights to the artwork used in this profile belong to me.</sup></sup></p>
+</div>
