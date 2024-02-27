@@ -131,5 +131,5 @@
 ###
 
 <div>
-  <p align="right"><sup><sup>🎨 All rights to the artwork used in this profile belong to me.</sup></sup></p>
+  <p align="right"><sup><sup>🎨 All rights to the drawn artwork used in this profile belong to me.</sup></sup></p>
 </div>
