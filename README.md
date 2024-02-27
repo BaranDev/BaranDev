@@ -20,6 +20,10 @@
 - 🏰 I also love **D&D, Lord of the Rings, RPG,** *most* **TRPG and CRPG** games. 
 
 ###
+
+<br>
+<h2 align="center">💾My Tech Stack💾</h3>
+
 <table border="0">
   <tr>
     <td align="center" width="350">
@@ -113,12 +117,12 @@
 ###
 
 <div align="center">
-  <a href="https://discord.com/users/247048683139366913"><img src="https://img.shields.io/badge/discord-baran____-white?style=for-the-badge&logo=discord&labelColor=black&color=rgb(114%2C137%2C218)" height="35" alt="discord logo"  /></a>
+  <a href="https://discord.com/users/247048683139366913"><img src="https://img.shields.io/badge/DISCORD-baran____-rgb(114%2C137%2C218)?style=flat-square&logo=discord&labelColor=black" height="35" alt="discord logo"  /></a>
 <a href="mailto:cevdetbaranoral@gmail.com">
   <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo" /></a>
   <a href="https://www.linkedin.com/in/cevdetbaranoral/"><img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  /></a>
   <a href="https://github.com/barandev" target="_blank" rel="noreferrer">
-  <img src="https://img.shields.io/github/followers/barandev?style=for-the-badge" alt="GitHub Follow" height="35"/>
+  <img src="https://img.shields.io/github/followers/barandev?style=for-the-badge&logo=github" alt="GitHub Follow" height="35"/>
 </a>
 </div>
 
