@@ -7,7 +7,7 @@
 
 ###
 
-- 🔭 I’m currently working on **[Bardforge](https://www.bardforge.com), an *accurate* song recommendation app.**
+- 🔭 I’m currently working on **[Bardforge](https://www.bardforge.com)(WIP), an *accurate* song recommendation app.**
 
 - 🌱 I’m currently learning **Machine Learning, Quantum Computing, Data Analytics.**
 
