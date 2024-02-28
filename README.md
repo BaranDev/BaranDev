@@ -29,6 +29,8 @@
     <td align="center" width="350">
       <p><strong>Cloud Services</strong></p>
       <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a>
+      <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="azure" width="40" height="40"/> </a>
+      <a href="https://www.heroku.com" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-plain.svg" alt="heroku" width="40" height="40"/>
     </td>
     <td align="center" width="350">
       <p><strong>3D Graphics</strong></p>
@@ -87,7 +89,8 @@
       <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/>
       <a href="https://unrealengine.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg" alt="unreal" width="40" height="40"/>
       <a href="https://dotnet.microsoft.com/apps/xamarin" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/xamarin.svg" alt="xamarin" width="40" height="40"/>
-      <a href="https://www.image-line.com" target="_blank" rel="noreferrer"> <img src="https://www.image-line.com/wp-content/themes/intracto/build/images/fl-header-logo.png" alt="xamarin" width="40" height="40"/>
+      <a href="https://www.image-line.com" target="_blank" rel="noreferrer"> <img src="https://www.image-line.com/wp-content/themes/intracto/build/images/fl-header-logo.png" alt="flstudio" width="40" height="40"/>
+        <a href="https://www.gimp.org" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" alt="gimp" width="40" height="40"/>
     </td>
     <td align="center">
       <p><strong>Integration</strong></p>
