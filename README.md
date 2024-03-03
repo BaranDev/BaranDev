@@ -17,7 +17,7 @@
 
 - ⚡ Fun fact **I also know how to make some *catchy* songs, use illustrator and make vector animations!**
 
-- 🏰 I also love **D&D, Lord of the Rings, RPG,** *most* **TRPG and CRPG** games. 
+- 🏰 I also love **D&D, Lord of the Rings, RPG,** *most* **TTRPG and CRPG** games. 
 
 ###
 
