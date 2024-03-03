@@ -111,7 +111,7 @@
 
 <div align="center">
   <div align="center">
-    <p><strong>Contrubution Seeker🐍</strong></p>
+    <p><strong>Contribution Seeker🐍</strong></p>
   </div>
   <img alt="Contrubutive Snake" src="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg" />
 </div>
