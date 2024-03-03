@@ -22,7 +22,7 @@
 ###
 
 <br>
-<h2 align="center">💾My Tech Stack💾</h3>
+<h3 align="center">💾My Tech Stack💾</h3>
 
 <table border="0">
   <tr>
@@ -134,5 +134,5 @@
 ###
 
 <div>
-  <p align="right"><sup><sup>🎨 All rights to the drawn artwork used in this profile belong to me.</sup></sup></p>
+  <p align="right"><sup><sup>🎨 All rights to the drawn artworks used in this profile belong to me.</sup></sup></p>
 </div>
