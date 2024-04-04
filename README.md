@@ -1,3 +1,5 @@
+![barandev-banner@2x CUT](https://github.com/BaranDev/BaranDev/assets/67805576/1480142b-b9c4-4ea2-8a04-92c09d81b558)
+
 <div align="center">
   <img src="https://github.com/BaranDev/BaranDev/assets/67805576/4d51460c-ea42-494d-bf4a-b78427051996" width="120" />
 </div>
