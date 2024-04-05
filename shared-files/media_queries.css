@@ -6,9 +6,41 @@
                                 ██████╔╝██║  ██║██║  ██║██║  ██║██║ ╚████║██████╔╝███████╗ ╚████╔╝ 
                                 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝  ╚═══╝  
                             Please give credits to BaranDev if you will publish this file's contents.
-This document is a list of media queries for 236 different devices. It is not a fully complete list, but it is a good starting point.
+This document is a list of media queries for 236 different devices and some general queries. It is not a fully complete list, but it is a good starting point.
 
 */
+
+/*----------------------------*/
+/*   General Use Queries     */
+/*--------------------------*/
+/* Extra Small Devices (Phones, less than 600px) */
+@media screen and (max-width: 599px) {
+  /* Styles */
+}
+
+/* Small Devices (Tablets in portrait mode, 600px and up) */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* Styles */
+}
+
+/* Medium Devices (Tablets in landscape mode / small desktops, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles */
+}
+
+/* Large Devices (Desktops, 1024px and up) */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  /* Styles */
+}
+
+/* Extra Large Devices (Large desktops, 1280px and up) */
+@media screen and (min-width: 1280px) {
+  /* Styles */
+}
+
+/*-----------------------------*/
+/*  Device Specific Queries   */
+/*---------------------------*/
 
 @media only screen and (min-device-width: 810px) and (max-device-width: 1080px) and (-webkit-min-device-pixel-ratio: 2) {
   /* Styles for Apple iPad 10.2" (Tablet) */
