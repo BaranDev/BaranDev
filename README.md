@@ -17,7 +17,7 @@
 
 - 📫 You can reach me from **<a href="mailto:cevdetbaranoral@gmail.com">cevdetbaranoral@gmail.com</a>**
 
-- ⚡ Fun fact **I also know how to make some *catchy* songs, use illustrator and make vector animations!**
+- ⚡ Fun fact: **I also know how to make some *catchy* songs, use illustrator and make vector animations!**
 
 - 🏰 I also love **D&D, Lord of the Rings, RPG,** *most* **TTRPG and CRPG** games. 
 
