@@ -5,7 +5,7 @@
 </div>
 
 <h1 align="center">Hello, I'm Baran</h1>
-<h3 align="center">Full Stack Developer | Software Engineer | Turning Tea into Automated Solutions</h3>
+<h3 align="center">Full Stack Developer | Software Engineer | Code-Fu Time Bender</h3>
 <div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=barandev" alt="Visitors" />
 </div>
