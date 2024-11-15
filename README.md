@@ -27,7 +27,7 @@ const baran = {
 
 ## About Me
 
-
+Hey! I'm a new full-stack dev who picks up things super quickly. While I'm still early in my career, I'm already comfortable juggling both frontend and backend work. I love diving into new tech and challenges - give me a problem and I'll figure out how to solve it! Been having a blast building apps and automating stuff. Sure, I'm learning as I go, but that's what makes it exciting!
 
 - Currently developing **[Bardforge](https://www.bardforge.com)** - An AI-powered music recommendation platform
 - Advancing my expertise in **Machine Learning, Quantum Computing, and Data Analytics**
