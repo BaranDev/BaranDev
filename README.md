@@ -137,7 +137,6 @@ Hey! I'm a junior full-stack dev who picks up things super quickly. While I'm st
 <div align="center">
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=barandev&show_icons=true&theme=radical&hide_border=true)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=barandev&theme=radical&hide_border=true)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=barandev&layout=compact&theme=radical&hide_border=true)
 ![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=barandev&theme=radical)
 ![Contribution Snake](https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg)
