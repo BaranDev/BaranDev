@@ -122,13 +122,13 @@ const developer = {
 
 <div align="center">
 
-| 🏆 **Metric** | 📊 **Count** | 🎯 **Status** |
-| :--- | :---: | :---: |
-| **Total Repositories** | ![](https://img.shields.io/badge/30+-2F5233?style=for-the-badge&logo=github&logoColor=white) | Active |
-| **Stars Earned** | ![](https://img.shields.io/badge/100+-FFD700?style=for-the-badge&logo=star&logoColor=black) | Growing |
-| **Contributions (2024)** | ![](https://img.shields.io/badge/500+-8FBC8F?style=for-the-badge&logo=git&logoColor=white) | Consistent |
-| **Pull Requests** | ![](https://img.shields.io/badge/50+-9370DB?style=for-the-badge&logo=gitpullrequest&logoColor=white) | Collaborative |
-| **Issues Resolved** | ![](https://img.shields.io/badge/75+-FF6347?style=for-the-badge&logo=checkmarx&logoColor=white) | Problem Solver |
+| 🏆 **Metric** | 📊 **Live Data** |
+| :--- | :---: |
+| **Public Repositories** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.public_repos&color=2F5233&style=for-the-badge&logo=github&logoColor=white) |
+| **Total Stars** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github-star-counter.workers.dev/user/barandev&label=&query=$.stars&color=FFD700&style=for-the-badge&logo=star&logoColor=black) | 
+| **Followers** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.followers&color=8FBC8F&style=for-the-badge&logo=github&logoColor=white) | 
+| **Following** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.following&color=9370DB&style=for-the-badge&logo=github&logoColor=white) | 
+| **Total Forks** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github-star-counter.workers.dev/user/barandev&label=&query=$.forks&color=FF6347&style=for-the-badge&logo=git&logoColor=white) | 
 
 </div>
 
