@@ -1,138 +1,242 @@
-<img src="https://github.com/BaranDev/BaranDev/assets/67805576/1480142b-b9c4-4ea2-8a04-92c09d81b558" alt="Professional Banner" width="100%" />
-
 <div align="center">
-  <img src="https://github.com/BaranDev/BaranDev/assets/67805576/4d51460c-ea42-494d-bf4a-b78427051996" width="150" />
+  <img src="./hosted files/banner.gif" width="1000" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);" />
 </div>
 
-<h1 align="center">Hello, I'm Baran</h1>
-<h3 align="center">Full Stack Developer | Software Engineer | Turning Tea into Automated Solutions</h3>
+<br>
+
 <div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=barandev" alt="Visitors" />
+  
+```diff
+@@                    Welcome to My GitHub Profile                      @@
++                      Cevdet Baran Oral                                +
+!                     Full Stack Developer                              !
+#                     Software Engineer                                 #
+```
+
+<br>
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" style="border: none;">
+        <img src="https://user-images.githubusercontent.com/74038190/213844263-a8897a51-32f4-4b3b-b5c2-e1528b89f6f3.png" width="40px" /><br>
+        <strong>Famagusta, Cyprus</strong>
+      </td>
+      <td align="center" style="border: none;">
+        <img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="40px" /><br>
+        <strong>Problem Solver</strong>
+      </td>
+    </tr>
+  </table>
 </div>
+
+<br>
+
+<img src="https://komarev.com/ghpvc/?username=barandev&style=for-the-badge&color=8FBC8F&labelColor=2F5233&label=Profile+Views" />
+  
+</div>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
+## <img src="https://user-images.githubusercontent.com/74038190/216120981-b9507c36-0e04-4469-8e27-c99271b45ba5.png" width="33px" /> About Me
+
+<table align="center">
+<tr>
+<td width="50%">
+
+<img align="right" width="400" src="./hosted files/coding.gif" />
+
+</td>
+<td width="50%">
 
 ```javascript
-const baran = {
+const developer = {
   name: 'Cevdet Baran Oral',
   location: 'Famagusta, Cyprus',
-  type: 'Homosapiens',
-  traits: ['Automation addict', 'Bug creator', 'Solution finder'],
-  status: {
-    currently: 'Turning tea into binary magic',
-    always: 'Debugging'
-  },
-  superpower: 'Can read Stack Overflow through osmosis',
-  favorite_bug: 'The one that works in production but not in dev'
+  role: 'Full Stack Developer',
+  
+  currentProject: 'Bardforge.com',
+  description: 'AI-powered music platform',
+  
+  learning: [
+    'Machine Learning',
+    'Quantum Computing',
+    'Data Analytics'
+  ],
+  
+  skills: [
+    'UI/UX Design',
+    'Vector Animation',
+    'Music Production',
+    'Data Science',
+    'Quantum Computing',
+    'Fullstack Web Development',
+    'System Architecture Designer'
+  ],
+  
+  contact: 'cevdetbaranoral@gmail.com'
 };
 ```
 
-## About Me
+</td>
+</tr>
+</table>
 
-Hey! I'm a junior full-stack dev. While I'm still early in my career, I'm already comfortable juggling both frontend and backend work. I love working with new tech and challenges - give me a problem and I'll figure out how to solve it! Been having a blast building apps and automating stuff. Sure, I'm learning as I go, but that's what makes it exciting!
-
-- Currently developing **[Bardforge](https://www.bardforge.com)** - An AI-powered music recommendation platform
-- Advancing my expertise in **Machine Learning, Quantum Computing, and Data Analytics**
-- I'm open to opportunities in full-stack development and innovative projects.
-- Reach me at: **[cevdetbaranoral@gmail.com](mailto:cevdetbaranoral@gmail.com)**
-- Additional skills: UI/UX design, vector animation, and music production
-  
-## Tech Stack
-
-<div align="left">
-
-### Cloud Services
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-
-### 3D Graphics
-![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
-
-### Frontend
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black)
-
-### Backend
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
-### Databases & Data Storage
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-
-### Testing & QA
-![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
-![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
-![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-
-### CI/CD & DevOps
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
-
-### Other Programming Languages
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-
-### Frameworks & Libraries
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-### Tools & Software
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Illustrator](https://img.shields.io/badge/Illustrator-FF9A00?style=for-the-badge&logo=adobe-illustrator&logoColor=white)
-![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
-![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
-![Unreal](https://img.shields.io/badge/Unreal-313131?style=for-the-badge&logo=unreal-engine&logoColor=white)
-![FL Studio](https://img.shields.io/badge/FL_Studio-B1B1B1?style=for-the-badge&logo=image-line&logoColor=white)
-![GIMP](https://img.shields.io/badge/GIMP-5C5543?style=for-the-badge&logo=gimp&logoColor=white)
-
-### Integration
-![Zapier](https://img.shields.io/badge/Zapier-FF4A00?style=for-the-badge&logo=zapier&logoColor=white)
-
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mayhemantt/mayhemantt/Update/svg/Bottom.svg" width="100%">
 </div>
 
-## GitHub Analytics
+## <img src="https://user-images.githubusercontent.com/74038190/216120974-24a76b31-7f39-41f1-a38f-b3c1377cc612.png" width="33px" /> Technical Skills
+
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=barandev&show_icons=true&theme=radical&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=barandev&layout=compact&theme=radical&hide_border=true)
-![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=barandev&theme=radical)
-![Contribution Snake](https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg)
+| [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Programming+Languages)](https://git.io/typing-svg) | [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Frontend+Development)](https://git.io/typing-svg) | [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Backend+Development)](https://git.io/typing-svg) |
+| :---: | :---: | :---: |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,javascript,typescript&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react,vue,angular&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs,flask,fastapi&theme=light" /></a> |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=java,cs,cpp&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=tailwind,bootstrap,redux&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=express,dotnet,django&theme=light" /></a> |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=c,html,css&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nextjs,webpack,jquery&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=graphql,firebase,docker&theme=light" /></a> |
+
+<br>
+
+| [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Databases)](https://git.io/typing-svg) | [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Cloud+%26+DevOps)](https://git.io/typing-svg) | [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Design+%26+3D)](https://git.io/typing-svg) |
+| :---: | :---: | :---: |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=mongodb,mysql,postgres&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=aws,azure,gcp&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=figma,ps,ai&theme=light" /></a> |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=sqlite,redis&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=heroku,netlify,vercel&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=blender,unity,unreal&theme=light" /></a> |
+| **Oracle SQL** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=kubernetes&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=ableton&theme=light" /></a> |
+
+<br>
+
+| [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Testing+%26+QA)](https://git.io/typing-svg) | [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=CI%2FCD+%26+Automation)](https://git.io/typing-svg) | [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Cinzel&size=20&pause=1000&color=2F5233&center=true&vCenter=true&repeat=false&width=280&lines=Development+Tools)](https://git.io/typing-svg) |
+| :---: | :---: | :---: |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=jest,cypress,selenium&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=jenkins,terraform,ansible&theme=light" /></a> | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,gitlab&theme=light" /></a> |
+| <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=postman&theme=light" /></a> | **GitHub Actions** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=vscode,visualstudio,idea&theme=light" /></a> |
+| **JUnit** | **Zapier** | <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=anaconda&theme=light" /></a> |
+
 </div>
 
-## Let's Connect
-
-[![Gmail](https://img.shields.io/badge/Gmail-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cevdetbaranoral@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cevdetbaranoral/)
-
-<div align="right">
-  <sup><sup>✨ All artwork © Cevdet Baran Oral</sup></sup>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 </div>
 
+## <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" width="30px" /> GitHub Statistics
+
+<div align="center">
+
+| 🏆 **Metric** | 📊 **Live Data** |
+| :--- | :---: |
+| **Public Repositories** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.public_repos&color=2F5233&style=for-the-badge&logo=github&logoColor=white) |
+| **Total Stars** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github-star-counter.workers.dev/user/barandev&label=&query=$.stars&color=FFD700&style=for-the-badge&logo=star&logoColor=black) | 
+| **Followers** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.followers&color=8FBC8F&style=for-the-badge&logo=github&logoColor=white) | 
+| **Following** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.following&color=9370DB&style=for-the-badge&logo=github&logoColor=white) | 
+| **Total Forks** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github-star-counter.workers.dev/user/barandev&label=&query=$.forks&color=FF6347&style=for-the-badge&logo=git&logoColor=white) | 
+
+</div>
+
+<br>
+
+<div align="center">
+  
+<a href="https://github.com/barandev">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=barandev&show_icons=true&theme=forest&bg_color=1a1b27&title_color=8FBC8F&text_color=F5F5E8&icon_color=FFD700&border_color=2F5233&border_radius=15" />
+</a>
+<a href="https://github.com/barandev">
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=barandev&theme=highcontrast&background=1a1b27&ring=8FBC8F&fire=FFD700&currStreakLabel=F5F5E8&sideLabels=8FBC8F&dates=F5F5E8&border=2F5233&border_radius=15" />
+</a>
+
+<a href="https://github.com/barandev">
+  <img width="60%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=barandev&layout=compact&theme=forest&bg_color=1a1b27&title_color=8FBC8F&text_color=F5F5E8&border_color=2F5233&border_radius=15&langs_count=10" />
+</a>
+
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=barandev&theme=algolia&no-frame=true&no-bg=false&margin-w=15&margin-h=15&column=7" width="90%" />
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=barandev&custom_title=Contribution%20Activity&bg_color=1a1b27&color=8FBC8F&line=FFD700&point=F5F5E8&area_color=2F5233&area=true&radius=10" width="90%"/>
+</div>
+
+<br>
+
+<div align="center">
+  <h3>🐍 Contribution Snake Animation</h3>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg">
+  </picture>
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/vintage.png" width="100%">
+</div>
+
+## <img src="https://user-images.githubusercontent.com/74038190/216121919-60befe4d-11c6-4227-8992-35221d12ff54.png" width="30px" /> Current Projects
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+### 🎵 **Bardforge**
+**AI-Powered Music Recommendation Platform**
+
+<img src="https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge&labelColor=2F5233" />
+<br>
+<img src="https://img.shields.io/badge/Progress-75%25-8FBC8F?style=for-the-badge&labelColor=2F5233" />
+
+[**Visit Website**](https://www.bardforge.com)
+
+</td>
+<td align="center" width="50%">
+
+### 📚 **Learning Focus**
+**Current Technologies**
+
+• Machine Learning & AI  
+• Quantum Computing  
+• Data Analytics  
+• Advanced UI/UX Design  
+• Music Production Technology  
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+</div>
+
+## <img src="https://user-images.githubusercontent.com/74038190/216121986-1a506a75-2381-41c2-baff-eeab94bcec74.png" width="30px" /> Connect With Me
+
+<div align="center">
+  
+  <a href="mailto:cevdetbaranoral@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/cevdetbaranoral/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/BaranDev">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  
+</div>
+
+<br>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2F5233,50:8FBC8F,100:2F5233&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=20&fontColor=F5F5E8&animation=twinkling" width="100%" />
+</div>
+
+<div align="center">
+  <sub>© 2025 Cevdet Baran Oral • All Rights Reserved</sub>
 </div>
