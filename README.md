@@ -122,7 +122,7 @@ const developer = {
 
 <div align="center">
 
-| 🏆 **Metric** | 📊 **Live Data** |
+| **Metric** | **Live Data** |
 | :--- | :---: |
 | **Public Repositories** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/users/barandev&label=&query=$.public_repos&color=2F5233&style=for-the-badge&logo=github&logoColor=white) |
 | **Total Stars** | ![](https://img.shields.io/badge/dynamic/json?url=https://api.github-star-counter.workers.dev/user/barandev&label=&query=$.stars&color=FFD700&style=for-the-badge&logo=star&logoColor=black) | 
@@ -183,7 +183,7 @@ const developer = {
 <tr>
 <td align="center" width="50%">
 
-### 🎵 **Bardforge**
+### **Bardforge**
 **AI-Powered Music Recommendation Platform**
 
 <img src="https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge&labelColor=2F5233" />
@@ -195,7 +195,7 @@ const developer = {
 </td>
 <td align="center" width="50%">
 
-### 📚 **Learning Focus**
+### **Learning Focus**
 **Current Technologies**
 
 • Machine Learning & AI  
