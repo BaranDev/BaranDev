@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <!-- Pixel art leaf/fern icon -->
+  <rect x="12" y="2" width="4" height="4" fill="#8FBC8F"/>
+  <rect x="8" y="6" width="4" height="4" fill="#4a7a4a"/>
+  <rect x="12" y="6" width="4" height="4" fill="#8FBC8F"/>
+  <rect x="16" y="6" width="4" height="4" fill="#4a7a4a"/>
+  <rect x="4" y="10" width="4" height="4" fill="#2F5233"/>
+  <rect x="8" y="10" width="4" height="4" fill="#8FBC8F"/>
+  <rect x="12" y="10" width="4" height="4" fill="#4a7a4a"/>
+  <rect x="16" y="10" width="4" height="4" fill="#8FBC8F"/>
+  <rect x="20" y="10" width="4" height="4" fill="#2F5233"/>
+  <rect x="8" y="14" width="4" height="4" fill="#4a7a4a"/>
+  <rect x="12" y="14" width="4" height="4" fill="#8FBC8F"/>
+  <rect x="16" y="14" width="4" height="4" fill="#4a7a4a"/>
+  <rect x="12" y="18" width="4" height="4" fill="#5c3a1e"/>
+</svg>
