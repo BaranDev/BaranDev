@@ -5,10 +5,6 @@
 <br>
 
 <div align="center">
-  <img src="./hosted files/parchment.svg" width="500" />
-</div>
-
-<div align="center">
 
 ```diff
 @@                    Welcome to My GitHub Profile                      @@
@@ -40,10 +36,6 @@
 </div>
 
 <br>
-
-<div align="center">
-  <img src="./hosted files/parchment.svg" width="300" />
-</div>
 
 ## About Me
 
