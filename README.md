@@ -128,11 +128,6 @@ const developer = {
 </div>
 
 <br>
-
-<div align="center">
-  <img src="./hosted files/quest-board.svg" width="400" />
-</div>
-
 ## Current Projects
 
 <div align="center">
