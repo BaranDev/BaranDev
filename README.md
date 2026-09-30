@@ -159,7 +159,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="./hosted files/raven-moon.png" width="700" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/raven-moon.png" width="700" />
 </div>
 <br>
 
