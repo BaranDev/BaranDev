@@ -64,6 +64,8 @@ def test_render():
                 assert im.size == (1600, 640), fn.__name__
                 stray = {c for _, c in im.getcolors(1 << 16)} - allowed
                 assert not stray, (fn.__name__, list(stray)[:5])  # identical style: palette + title colors only
+    assert render.stages([("a", 10), ("b", 611), ("c", 611), ("d", 0), ("e", 50)]) == [1, 3, 4, 0, 1]  # one greatest: newest best
+    assert render.stages([("a", 0), ("b", 0)]) == [0, 0]                              # quiet year: no trees, no crash
     frames = render.forest(SAMPLE)
     assert len(frames) > 1 and frames[0].tobytes() != frames[len(frames) // 2].tobytes()   # month names float
     assert len(render.character(SAMPLE)) == 1

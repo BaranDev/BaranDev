@@ -10,7 +10,7 @@ W, H, K = 1600, 640, 5
 GOLD, EDGE = (245, 222, 160), (28, 18, 10)            # the scene-title pair
 INK, PAPER, SHADE = (0x24, 0x15, 0x16), (0xF2, 0xF0, 0xA0), (0xC8, 0x9B, 0x3C)  # palette: ink, parchment, parchment edge
 PIN, BAR, XP = (0xAA, 0x52, 0x29), (0x36, 0x80, 0x4A), (0xC1, 0x75, 0x30)
-TREES = [None] + [Image.open(ASSETS / f"tree-{i}.png").convert("RGBA") for i in (1, 2, 3)]  # sapling, young, great (art px)
+TREES = [None] + [Image.open(ASSETS / f"tree-{i}.png").convert("RGBA") for i in (1, 2, 3, 4)]  # sapling, young, great, greatest
 SHADOW, FIREFLY = (0x1D, 0x4A, 0x32), (0xCB, 0xD5, 0x51)
 TITLE = ImageFont.truetype(str(ASSETS / "NodestoCapsCondensed-Bold.otf"), 30)
 PIXEL = ImageFont.truetype(str(ASSETS / "Tiny5-Regular.ttf"), 8)
@@ -139,6 +139,18 @@ def quests(s):
     return [c.flatten()]
 
 
+def stages(months):
+    """Growth stage per month: 0 none, 1 sapling, 2 young, 3 great, 4 the single greatest tree for the best month
+    (a tie goes to the newest month)."""
+    counts = [n for _, n in months]
+    most = max(counts, default=0)
+    if not most:
+        return [0] * len(counts)
+    best = len(counts) - 1 - counts[::-1].index(most)
+    return [4 if i == best else 0 if n == 0 else 1 if n <= most * 0.15 else 2 if n <= most * 0.5 else 3  # quiet months stay saplings
+            for i, n in enumerate(counts)]
+
+
 BOB = (0, 0, -1, -1, -2, -2, -1, -1)  # half-px float offsets per frame: a slow up-and-down loop
 
 
@@ -150,11 +162,9 @@ def forest(s):
     c.outlined(str(s["year"]), 10, 30, PIXEL, shadow=False)  # small subtitle, same style as the character card's class line
     stats = f"Streak {s['current']:,}   Best {s['longest']:,}   Total {s['total']:,}"
     c.outlined(stats, (W // K - int(c.d.textlength(stats, font=PIXEL))) // 2, 33, PIXEL, shadow=False)
-    most = max((n for _, n in s["months"]), default=0) or 1
     ground, labels = 112, []
-    for i, (label, n) in enumerate(s["months"]):
+    for i, ((label, n), stage) in enumerate(zip(s["months"], stages(s["months"]))):
         cx = 16 + 24 * i + 12  # 12 slots across the whole grass line
-        stage = 0 if n == 0 else 1 if n <= most * 0.15 else 2 if n <= most * 0.5 else 3  # quiet months stay saplings
         top = c.sprite(TREES[stage], cx, ground) if stage else ground - 2
         num = f"{n:,}"
         c.outlined(num, cx - int(c.d.textlength(num, font=PIXEL)) // 2, ground + 3, PIXEL, shadow=False)
