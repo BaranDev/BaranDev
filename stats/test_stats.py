@@ -43,24 +43,29 @@ def test_data():
     s = data.derive(user, date(2026, 1, 6))
     assert data.derive(user, date(2026, 1, 6), birth=date(2003, 1, 6))["level"] == 23   # level = age when a birth date is set
     assert (s["total"], s["stars"], s["prs"], s["repos"], s["commits"]) == (7, 7, 7, 2, 5)  # 01-05 counted once
-    assert s["days"] == [(0, 0, 1), (0, 1, 4)]              # 2026-01-04 is a Sunday -> row 0
+    assert len(s["months"]) == 12 and s["months"][0] == ("Feb", 0)            # the 12 months ending this month
+    assert s["months"][-1] == ("Jan", 7)                                         # Jan 2026 total, 01-05 counted once
 
 
 SAMPLE = {"login": "barandev", "level": 18, "xp": 0.42, "total": 12345, "commits": 85, "prs": 197, "repos": 25, "stars": 12,
           "languages": [("TypeScript", 0.5), ("Python", 0.2), ("JavaScript", 0.15), ("C#", 0.1), ("HTML", 0.05)],
           "quests": [{"name": "a-very-long-repository-name-that-cannot-possibly-fit", "lang": "TypeScript", "days": 0},
                      {"name": "winhub", "lang": "", "days": 36}],
-          "days": [(c, r, (c * 7 + r) % 5) for c in range(53) for r in range(7)][:368], "current": 12, "longest": 40}
+          "months": [(m, n) for m, n in zip("Nov Dec Jan Feb Mar Apr May Jun Jul Aug Sep Oct".split(), (0, 5, 40, 120, 9, 0, 300, 77, 1, 64, 210, 12))],
+          "current": 12, "longest": 40}
 
 
 def test_render():
     allowed = render.palette() | {render.GOLD, render.EDGE}
     for s in (SAMPLE, dict(SAMPLE, languages=[], quests=[])):   # also an account with no languages or repos
         for fn in (render.character, render.quests, render.forest):
-            im = fn(s)
-            assert im.size == (1600, 640), fn.__name__
-            stray = {c for _, c in im.getcolors(1 << 16)} - allowed
-            assert not stray, (fn.__name__, list(stray)[:5])      # identical style: palette + title colors only
+            for im in fn(s):                                        # every card is a list of frames
+                assert im.size == (1600, 640), fn.__name__
+                stray = {c for _, c in im.getcolors(1 << 16)} - allowed
+                assert not stray, (fn.__name__, list(stray)[:5])  # identical style: palette + title colors only
+    frames = render.forest(SAMPLE)
+    assert len(frames) > 1 and frames[0].tobytes() != frames[len(frames) // 2].tobytes()   # month names float
+    assert len(render.character(SAMPLE)) == 1
     d = render.ImageDraw.Draw(render.Image.new("RGB", (1, 1)))
     t = render.fit(d, SAMPLE["quests"][0]["name"], render.PIXEL, 120)
     assert t.endswith("...") and d.textlength(t, font=render.PIXEL) <= 120

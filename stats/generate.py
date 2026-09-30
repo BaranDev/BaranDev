@@ -14,5 +14,7 @@ out.mkdir(parents=True, exist_ok=True)
 birth = date.fromisoformat(os.environ["BIRTHDATE"]) if os.environ.get("BIRTHDATE") else None  # private repo secret
 s = data.derive(data.fetch(os.environ.get("GITHUB_USER", "BaranDev"), os.environ["GITHUB_TOKEN"]), date.today(), birth)
 for name in ("character", "quests", "forest"):
-    getattr(render, name)(s).save(out / f"{name}.png", optimize=True)
+    first, *rest = getattr(render, name)(s)
+    # more than one frame -> animated PNG (APNG), which GitHub READMEs play inline
+    first.save(out / f"{name}.png", optimize=True, save_all=bool(rest), append_images=rest, duration=180, loop=0)
 print("wrote", out, "level", s["level"], "streak", s["current"])

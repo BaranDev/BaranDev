@@ -10,14 +10,8 @@ W, H, K = 1600, 640, 5
 GOLD, EDGE = (245, 222, 160), (28, 18, 10)            # the scene-title pair
 INK, PAPER, SHADE = (0x24, 0x15, 0x16), (0xF2, 0xF0, 0xA0), (0xC8, 0x9B, 0x3C)  # palette: ink, parchment, parchment edge
 PIN, BAR, XP = (0xAA, 0x52, 0x29), (0x36, 0x80, 0x4A), (0xC1, 0x75, 0x30)
-TILE_COLORS = {"d": (0x1D, 0x4A, 0x32), "L": (0x4A, 0x91, 0x3C), "t": (0x54, 0x2B, 0x1C)}
-TILES = [  # 4x4 plants by GitHub contribution level, dark enough to read on the bright grass; "." stays transparent
-    None,                                  # no contributions: bare grass
-    ["....", ".dd.", "dLdd", ".dd."],      # any contribution grows a bush
-    [".dd.", "dLdd", ".dd.", ".t.."],
-    ["dLdd", "dddL", "dLdd", ".tt."],
-    ["dLLd", "dLdL", "dddd", ".tt."],
-]
+TREES = [None] + [Image.open(ASSETS / f"tree-{i}.png").convert("RGBA") for i in (1, 2, 3)]  # sapling, young, great (art px)
+SHADOW, FIREFLY = (0x1D, 0x4A, 0x32), (0xCB, 0xD5, 0x51)
 TITLE = ImageFont.truetype(str(ASSETS / "NodestoCapsCondensed-Bold.otf"), 30)
 PIXEL = ImageFont.truetype(str(ASSETS / "Tiny5-Regular.ttf"), 8)
 
@@ -99,11 +93,13 @@ class Card:
         self.d.rectangle((x, y, x + w - 1, y + h - 1), fill=PAPER)
         self.d.rectangle((x + w // 2 - 1, y + 1, x + w // 2, y + 2), fill=PIN)
 
-    def tile(self, x, y, lvl):
-        for j, line in enumerate(TILES[lvl] or []):
-            for i, ch in enumerate(line):
-                if ch != ".":
-                    self.d.point((x + i, y + j), fill=TILE_COLORS[ch])
+    def sprite(self, im, cx, ground):
+        """Stand an art-pixel sprite on the ground line, centered on cx (half-grid units); returns its top y."""
+        big = im.resize((im.width * 2, im.height * 2), Image.Resampling.NEAREST)  # 1 art px = 2 half px
+        x, y = cx - big.width // 2 // 2 * 2, ground - big.height
+        self.d.rectangle((x + 2, ground - 1, x + big.width - 3, ground), fill=SHADOW)  # contact shadow on the grass
+        self.layer.alpha_composite(big, (x, y))
+        return y
 
     def flatten(self):
         out = self.bg.convert("RGBA")
@@ -125,7 +121,7 @@ def character(s):
     for i, (name, share) in enumerate(s["languages"]):
         c.text(name, right, top + 11 * i, max_w=page)
         c.bar(right, top + 7 + 11 * i, page, share / most)  # full bar = most used language
-    return c.flatten()
+    return [c.flatten()]
 
 
 def quests(s):
@@ -140,14 +136,37 @@ def quests(s):
             y += 7
         c.text(q["lang"], x + 2, 70, max_w=39)
         c.text(ago(q["days"]), x + 2, 77, max_w=39)
-    return c.flatten()
+    return [c.flatten()]
+
+
+BOB = (0, 0, -1, -1, -2, -2, -1, -1)  # half-px float offsets per frame: a slow up-and-down loop
 
 
 def forest(s):
+    """A grove of the last 12 months: each month is a tree whose growth stage follows its contributions, the count at its
+    foot and the month's name floating above it. Returns the animation frames (the month names bob, each a step out of phase)."""
     c = Card("bg-forest.png")
     c.title("Contribution Forest", 8, 4)
     stats = f"Streak {s['current']:,}   Best {s['longest']:,}   Total {s['total']:,}"
     c.outlined(stats, (W // K - int(c.d.textlength(stats, font=PIXEL))) // 2, 40, PIXEL, shadow=False)
-    for col, row, lvl in s["days"]:
-        c.tile(54 + 4 * col, 84 + 4 * row, lvl)  # 53 weeks x 7 days of plants on the grass
-    return c.flatten()
+    most = max((n for _, n in s["months"]), default=0) or 1
+    ground, labels = 108, []
+    for i, (label, n) in enumerate(s["months"]):
+        cx = 28 + 22 * i + 11
+        stage = 0 if n == 0 else 1 if n <= most / 3 else 2 if n <= most * 2 / 3 else 3
+        top = c.sprite(TREES[stage], cx, ground) if stage else ground - 2
+        num = f"{n:,}"
+        c.outlined(num, cx - int(c.d.textlength(num, font=PIXEL)) // 2, ground + 3, PIXEL, shadow=False)
+        labels.append((label, cx - int(c.d.textlength(label, font=PIXEL)) // 2, top - 10, i))
+        if i == len(s["months"]) - 1:  # this month: fireflies around its tree
+            for dx, dy in ((-10, -4), (9, -8), (-7, -14), (11, -2)):
+                c.d.rectangle((cx + dx // 2 * 2, top + 10 + dy // 2 * 2, cx + dx // 2 * 2 + 1, top + 11 + dy // 2 * 2), fill=FIREFLY)
+    base, frames = c.layer, []
+    for f in range(len(BOB)):
+        c.layer = base.copy()
+        c.d = ImageDraw.Draw(c.layer)
+        c.d.fontmode = "1"
+        for label, x, y, i in labels:
+            c.outlined(label, x, y + BOB[(f + i) % len(BOB)], PIXEL, shadow=False)
+        frames.append(c.flatten())
+    return frames

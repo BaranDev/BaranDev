@@ -4,7 +4,6 @@ import urllib.request
 from datetime import date, datetime, timedelta
 
 API = "https://api.github.com/graphql"
-LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
 
 MAIN = """query($login: String!) { user(login: $login) {
   login createdAt pullRequests { totalCount }
@@ -13,7 +12,7 @@ MAIN = """query($login: String!) { user(login: $login) {
     totalCount nodes { name stargazerCount pushedAt primaryLanguage { name }
       languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } } }
   contributionsCollection { totalCommitContributions contributionCalendar {
-    weeks { contributionDays { date contributionCount contributionLevel } } } } } }"""
+    weeks { contributionDays { date contributionCount } } } } } }"""
 
 YEAR = """query($login: String!, $from: DateTime!, $to: DateTime!) { user(login: $login) {
   contributionsCollection(from: $from, to: $to) { contributionCalendar {
@@ -103,6 +102,17 @@ def quests(repos, login, today, n=3):
     return out[:n]
 
 
+def months(days, today, n=12):
+    """(label, total) for the n calendar months ending with this one, oldest first."""
+    c = counts(days)
+    out = []
+    for back in range(n - 1, -1, -1):
+        y, m = divmod(today.year * 12 + today.month - 1 - back, 12)
+        key = f"{y}-{m + 1:02d}"
+        out.append((date(y, m + 1, 1).strftime("%b"), sum(v for d, v in c.items() if d.startswith(key))))
+    return out
+
+
 def derive(user, today, birth=None):
     repos = user["repositories"]["nodes"]
     coll = user["contributionsCollection"]
@@ -113,6 +123,5 @@ def derive(user, today, birth=None):
             "commits": coll["totalCommitContributions"], "prs": user["pullRequests"]["totalCount"],
             "repos": user["repositories"]["totalCount"], "stars": sum(r["stargazerCount"] for r in repos),
             "languages": languages(repos), "quests": quests(repos, user["login"], today),
-            "days": [(col, (date.fromisoformat(d["date"]).weekday() + 1) % 7, LEVELS[d["contributionLevel"]])
-                     for col, w in enumerate(coll["contributionCalendar"]["weeks"]) for d in w["contributionDays"]],
+            "months": months(user["history"], today),
             "current": current, "longest": longest}
