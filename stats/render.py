@@ -11,7 +11,7 @@ GOLD, EDGE = (245, 222, 160), (28, 18, 10)            # the scene-title pair
 INK, PAPER, SHADE = (0x24, 0x15, 0x16), (0xF2, 0xF0, 0xA0), (0xC8, 0x9B, 0x3C)  # palette: ink, parchment, parchment edge
 PIN, BAR, XP = (0xAA, 0x52, 0x29), (0x36, 0x80, 0x4A), (0xC1, 0x75, 0x30)
 TREES = [None] + [Image.open(ASSETS / f"tree-{i}.png").convert("RGBA") for i in (1, 2, 3, 4)]  # sapling, young, great, greatest
-SHADOW, FIREFLY = (0x1D, 0x4A, 0x32), (0xCB, 0xD5, 0x51)
+FIREFLY = (0xCB, 0xD5, 0x51)
 TITLE = ImageFont.truetype(str(ASSETS / "NodestoCapsCondensed-Bold.otf"), 30)
 PIXEL = ImageFont.truetype(str(ASSETS / "Tiny5-Regular.ttf"), 8)
 
@@ -97,7 +97,6 @@ class Card:
         """Stand an art-pixel sprite on the ground line, centered on cx (half-grid units); returns its top y."""
         big = im.resize((im.width * 2, im.height * 2), Image.Resampling.NEAREST)  # 1 art px = 2 half px
         x, y = cx - big.width // 2 // 2 * 2, ground - big.height
-        self.d.rectangle((x + 2, ground - 1, x + big.width - 3, ground), fill=SHADOW)  # contact shadow on the grass
         self.layer.alpha_composite(big, (x, y))
         return y
 
