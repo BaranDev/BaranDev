@@ -1,26 +1,25 @@
-"""Draw the stats cards on their pixel-art backgrounds.
-Every mark sits on the 5 px half grid (canvas 320 x 128) and uses the scene palette, so the cards match the README scenes."""
+"""Draw the stats cards into their pixel-art backgrounds: ink on the book pages, notes pinned to the quest board, a grove
+growing on the clearing's grass. Every mark sits on the 5 px half grid (canvas 320 x 128) and uses the scene palette, so the
+cards match the README scenes. Layout coordinates are in half-grid units and follow the pages, board and grass of each background."""
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
 ASSETS = Path(__file__).parent / "assets"
 W, H, K = 1600, 640, 5
-GOLD, EDGE = (245, 222, 160), (28, 18, 10)          # the scene-title pair
-BOARD, WOOD = (0x3E, 0x2D, 0x21), (0x7C, 0x4B, 0x25)  # palette: dark wood fill, wood border
-LIGHT, XP = (0xF2, 0xF0, 0xA0), (0xC8, 0x9B, 0x3C)
-BAR, BAR_EMPTY = (0x76, 0xB8, 0x41), (0x0D, 0x3F, 0x2B)
-TILE_COLORS = {".": (0x1D, 0x4A, 0x32), ",": (0x2F, 0x53, 0x2F), "s": (0x76, 0xB8, 0x41), "b": (0x4A, 0x91, 0x3C),
-               "l": (0x36, 0x80, 0x4A), "L": (0x76, 0xB8, 0x41), "t": (0x7C, 0x4B, 0x25)}
-TILES = [  # 5x5 sprites by GitHub contribution level: grass, sprout, bush, small tree, big tree
-    [".....", ".,...", ".....", "...,.", "....."],
-    [".....", ".....", ".s.s.", "..s..", ".,.,."],
-    [".....", ".bbb.", "bbLbb", "bbbbb", ".,.,."],
-    ["..l..", ".lLl.", ".lll.", "..t..", ".,t,."],
-    [".lLl.", "lLlLl", "lllll", ".ltl.", "..t.."],
+GOLD, EDGE = (245, 222, 160), (28, 18, 10)            # the scene-title pair
+INK, PAPER, SHADE = (0x24, 0x15, 0x16), (0xF2, 0xF0, 0xA0), (0xC8, 0x9B, 0x3C)  # palette: ink, parchment, parchment edge
+PIN, BAR, XP = (0xAA, 0x52, 0x29), (0x36, 0x80, 0x4A), (0xC1, 0x75, 0x30)
+TILE_COLORS = {"d": (0x1D, 0x4A, 0x32), "L": (0x4A, 0x91, 0x3C), "t": (0x54, 0x2B, 0x1C)}
+TILES = [  # 4x4 plants by GitHub contribution level, dark enough to read on the bright grass; "." stays transparent
+    None,                                  # no contributions: bare grass
+    ["....", ".dd.", "dLdd", ".dd."],      # any contribution grows a bush
+    [".dd.", "dLdd", ".dd.", ".t.."],
+    ["dLdd", "dddL", "dLdd", ".tt."],
+    ["dLLd", "dLdL", "dddd", ".tt."],
 ]
 TITLE = ImageFont.truetype(str(ASSETS / "NodestoCapsCondensed-Bold.otf"), 30)
-PIXEL = ImageFont.truetype(str(ASSETS / "PressStart2P-Regular.ttf"), 8)
+PIXEL = ImageFont.truetype(str(ASSETS / "Tiny5-Regular.ttf"), 8)
 
 
 def palette():
@@ -28,12 +27,26 @@ def palette():
 
 
 def fit(d, s, font, max_w):
-    """Trim to max_w half-px with '...' so long names and descriptions stay inside their panel."""
+    """Trim to max_w half-px with '...' so long names and descriptions stay inside their space."""
     if d.textlength(s, font=font) <= max_w:
         return s
     while s and d.textlength(s + "...", font=font) > max_w:
         s = s[:-1]
     return s.rstrip() + "..."
+
+
+def wrap(d, s, font, max_w, max_lines):
+    """Break a repo name into lines of max_w, preferring hyphens and underscores; the last line is trimmed with '...'."""
+    lines = []
+    while s and len(lines) < max_lines - 1 and d.textlength(s, font=font) > max_w:
+        cut = len(s)
+        while cut > 1 and d.textlength(s[:cut], font=font) > max_w:
+            cut -= 1
+        soft = max(s.rfind("-", 0, cut), s.rfind("_", 0, cut))
+        cut = soft + 1 if soft > 0 else cut
+        lines.append(s[:cut])
+        s = s[cut:]
+    return lines + [fit(d, s, font, max_w)] if s else lines
 
 
 def ago(days):
@@ -49,41 +62,44 @@ class Card:
         self.d = ImageDraw.Draw(self.layer)
         self.d.fontmode = "1"  # no antialiasing: only exact palette colors
 
+    def outlined(self, text, x, y, font, shadow=True):
+        """Gold text with a 1 px dark outline (and drop shadow), stamped as offsets: Pillow antialiases real strokes."""
+        l, t, _, _ = self.d.textbbox((0, 0), text, font=font)
+        x, y = x - l + 1, y - t + 1
+        span = (-1, 0, 1, 2) if shadow else (-1, 0, 1)
+        for dx in span:
+            for dy in span:
+                self.d.text((x + dx, y + dy), text, font=font, fill=EDGE)
+        self.d.text((x, y), text, font=font, fill=GOLD)
+
     def title(self, text, x, y):
-        l, t, _, _ = self.d.textbbox((0, 0), text, font=TITLE)
-        x, y = x - l + 1, y - t + 1  # +1 leaves room for the outline
-        # Pillow antialiases strokes even in fontmode "1", so the 1 px outline and the drop shadow are stamped as offsets.
-        for dx in (-1, 0, 1, 2):
-            for dy in (-1, 0, 1, 2):
-                self.d.text((x + dx, y + dy), text, font=TITLE, fill=EDGE)
-        self.d.text((x, y), text, font=TITLE, fill=GOLD)
+        self.outlined(text, x, y, TITLE)
 
-    def panel(self, x, y, w, h):
-        """Wooden board with cut corners, snapped to whole 10 px art pixels."""
-        x, y, w, h = (v // 2 * 2 for v in (x, y, w, h))
-        self.d.rectangle((x + 2, y, x + w - 3, y + h - 1), fill=EDGE)
-        self.d.rectangle((x, y + 2, x + w - 1, y + h - 3), fill=EDGE)
-        self.d.rectangle((x + 1, y + 1, x + w - 2, y + h - 2), fill=WOOD)
-        self.d.rectangle((x + 3, y + 3, x + w - 4, y + h - 4), fill=BOARD)
-
-    def text(self, s, x, y, fill=GOLD, max_w=None):
+    def text(self, s, x, y, fill=INK, max_w=None):
         self.d.text((x, y), fit(self.d, s, PIXEL, max_w) if max_w else s, font=PIXEL, fill=fill)
 
     def row(self, label, value, x, y, w):
         self.text(label, x, y)
-        self.text(value, x + w - int(self.d.textlength(value, font=PIXEL)), y, LIGHT)
+        self.text(value, x + w - int(self.d.textlength(value, font=PIXEL)), y)
 
     def bar(self, x, y, w, frac, fill=BAR):
-        self.d.rectangle((x, y, x + w - 1, y + 3), fill=EDGE)
-        self.d.rectangle((x + 1, y + 1, x + w - 2, y + 2), fill=BAR_EMPTY)
-        n = round((w - 2) * max(0.0, min(1.0, frac)) / 2) * 2  # whole art pixels
+        """Thin bar on parchment: a 2 px track in the parchment's edge color, filled in whole art pixels."""
+        self.d.rectangle((x, y, x + w - 1, y + 1), fill=SHADE)
+        n = round(w * max(0.0, min(1.0, frac)) / 2) * 2
         if n:
-            self.d.rectangle((x + 1, y + 1, x + n, y + 2), fill=fill)
+            self.d.rectangle((x, y, x + n - 1, y + 1), fill=fill)
+
+    def note(self, x, y, w, h):
+        """A parchment note pinned to the board, like the ones painted in the background."""
+        self.d.rectangle((x + 1, y + 1, x + w, y + h), fill=SHADE)  # edge shadow
+        self.d.rectangle((x, y, x + w - 1, y + h - 1), fill=PAPER)
+        self.d.rectangle((x + w // 2 - 1, y + 1, x + w // 2, y + 2), fill=PIN)
 
     def tile(self, x, y, lvl):
-        for j, line in enumerate(TILES[lvl]):
+        for j, line in enumerate(TILES[lvl] or []):
             for i, ch in enumerate(line):
-                self.d.point((x + i, y + j), fill=TILE_COLORS[ch])
+                if ch != ".":
+                    self.d.point((x + i, y + j), fill=TILE_COLORS[ch])
 
     def flatten(self):
         out = self.bg.convert("RGBA")
@@ -93,19 +109,18 @@ class Card:
 
 def character(s):
     c = Card("bg-character.png")
-    c.title("Character Sheet", 8, 4)
-    c.panel(8, 32, 304, 90)
-    x, y = 14, 38
-    c.text(f"LEVEL {s['level']}", x, y)
-    c.bar(x, y + 11, 136, s["xp"], XP)
-    c.text("FULL STACK DEV", x, y + 19, LIGHT)
-    for i, (k, v) in enumerate((("COMMITS", s["commits"]), ("PRS", s["prs"]), ("REPOS", s["repos"]), ("STARS", s["stars"]))):
-        c.row(k, f"{v:,}", x, y + 30 + 11 * i, 136)
-    c.text("PROFICIENCIES", 164, y)
-    top = s["languages"][0][1] if s["languages"] else 1
+    c.title("Character", 8, 40)  # stacked on the foliage left of the book, clear of the pages
+    c.title("Sheet", 8, 64)
+    c.outlined("Full Stack Developer", 10, 92, PIXEL, shadow=False)
+    left, right, top, page = 112, 172, 30, 48  # the book's two pages (parchment spans x 106-222, y 26-87)
+    c.text(f"Level {s['level']}", left, top)
+    c.bar(left, top + 8, page, s["xp"], XP)
+    for i, (k, v) in enumerate((("Commits", s["commits"]), ("PRs", s["prs"]), ("Repos", s["repos"]), ("Stars", s["stars"]))):
+        c.row(k, f"{v:,}", left, top + 14 + 10 * i, page)
+    most = s["languages"][0][1] if s["languages"] else 1
     for i, (name, share) in enumerate(s["languages"]):
-        c.text(name, 164, y + 11 + 11 * i, LIGHT, max_w=84)
-        c.bar(252, y + 13 + 11 * i, 54, share / top)  # full bar = most used language
+        c.text(name, right, top + 11 * i, max_w=page)
+        c.bar(right, top + 7 + 11 * i, page, share / most)  # full bar = most used language
     return c.flatten()
 
 
@@ -113,21 +128,22 @@ def quests(s):
     c = Card("bg-quests.png")
     c.title("Recent Quests", 8, 4)
     for i, q in enumerate(s["quests"]):
-        y = 32 + 32 * i
-        c.panel(8, y, 304, 28)
-        right = " ".join(p for p in (q["lang"], ago(q["days"])) if p)
-        rw = int(c.d.textlength(right, font=PIXEL))
-        c.text(right, 306 - rw, y + 6, LIGHT)
-        c.text(q["name"], 14, y + 6, max_w=306 - rw - 8 - 14)
-        c.text(q["desc"], 14, y + 16, LIGHT, max_w=292)
+        x = 94 + 47 * i  # three notes across the board
+        c.note(x, 32, 43, 54)
+        y = 37
+        for line in wrap(c.d, q["name"], PIXEL, 39, 3):
+            c.text(line, x + 2, y)
+            y += 7
+        c.text(q["lang"], x + 2, 70, max_w=39)
+        c.text(ago(q["days"]), x + 2, 77, max_w=39)
     return c.flatten()
 
 
 def forest(s):
     c = Card("bg-forest.png")
     c.title("Contribution Forest", 8, 4)
-    c.panel(20, 32, 280, 64)
-    c.text(f"STREAK {s['current']:,}  BEST {s['longest']:,}  TOTAL {s['total']:,}", 26, 38, max_w=268)
+    stats = f"Streak {s['current']:,}   Best {s['longest']:,}   Total {s['total']:,}"
+    c.outlined(stats, (W // K - int(c.d.textlength(stats, font=PIXEL))) // 2, 40, PIXEL, shadow=False)
     for col, row, lvl in s["days"]:
-        c.tile(27 + 5 * col, 54 + 5 * row, lvl)
+        c.tile(54 + 4 * col, 84 + 4 * row, lvl)  # 53 weeks x 7 days of plants on the grass
     return c.flatten()

@@ -24,6 +24,11 @@ def test_data():
     assert data.level(49) == (1, 0.98)
     assert data.level(50) == (2, 0.0)
     assert data.level(150) == (3, 0.0)
+    assert data.age(date(2003, 5, 10), date(2026, 5, 10)) == (23, 0.0)       # birthday: level up, empty bar
+    lvl, frac = data.age(date(2003, 5, 10), date(2026, 5, 9))
+    assert lvl == 22 and 0.99 < frac < 1                                        # day before: bar almost full
+    assert data.age(date(2004, 2, 29), date(2026, 2, 28))[0] == 21              # leap-day birthday in a common year
+    assert data.age(date(2004, 2, 29), date(2026, 3, 1))[0] == 22
     langs = data.languages([repo("a", langs=(("Python", 300), ("HTML", 100))), repo("b", langs=(("Python", 100),))])
     assert langs == [("Python", 0.8), ("HTML", 0.2)]
     qs = data.quests([repo("BaranDev"), repo("x", desc=None, lang=None, pushed="2026-09-28T23:00:00Z"), repo("y"), repo("z"), repo("w")],
@@ -36,6 +41,7 @@ def test_data():
                 {"contributionDays": [day("2026-01-04", 1, "FIRST_QUARTILE"), day("2026-01-05", 3, "FOURTH_QUARTILE")]}]}},
             "history": hist}
     s = data.derive(user, date(2026, 1, 6))
+    assert data.derive(user, date(2026, 1, 6), birth=date(2003, 1, 6))["level"] == 23   # level = age when a birth date is set
     assert (s["total"], s["stars"], s["prs"], s["repos"], s["commits"]) == (7, 7, 7, 2, 5)  # 01-05 counted once
     assert s["days"] == [(0, 0, 1), (0, 1, 4)]              # 2026-01-04 is a Sunday -> row 0
 
@@ -58,6 +64,10 @@ def test_render():
     d = render.ImageDraw.Draw(render.Image.new("RGB", (1, 1)))
     t = render.fit(d, SAMPLE["quests"][0]["name"], render.PIXEL, 120)
     assert t.endswith("...") and d.textlength(t, font=render.PIXEL) <= 120
+    lines = render.wrap(d, "cevdetbaranoral-portfolio", render.PIXEL, 40, 3)   # quest notes: break at hyphens, 3 lines max
+    assert lines[0] == "cevdetbaranoral-"[: len(lines[0])] and 1 < len(lines) <= 3, lines
+    assert all(d.textlength(l, font=render.PIXEL) <= 40 for l in lines), lines
+    assert render.wrap(d, "winhub", render.PIXEL, 40, 3) == ["winhub"]
 
 
 if __name__ == "__main__":

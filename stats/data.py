@@ -67,6 +67,22 @@ def level(total):
     return lvl + 1, round((total - 25 * lvl * (lvl + 1)) / (50 * (lvl + 1)), 4)
 
 
+def birthday(birth, year):
+    try:
+        return birth.replace(year=year)
+    except ValueError:  # Feb 29 in a common year: celebrate on Mar 1
+        return date(year, 3, 1)
+
+
+def age(birth, today):
+    """Level = age in years; the XP bar is the share of the way to the next birthday."""
+    last = birthday(birth, today.year)
+    if last > today:
+        last = birthday(birth, today.year - 1)
+    nxt = birthday(birth, last.year + 1)
+    return last.year - birth.year, round((today - last).days / (nxt - last).days, 4)
+
+
 def languages(repos, top=5):
     sizes = {}
     for r in repos:
@@ -88,11 +104,11 @@ def quests(repos, login, today, n=3):
     return out[:n]
 
 
-def derive(user, today):
+def derive(user, today, birth=None):
     repos = user["repositories"]["nodes"]
     coll = user["contributionsCollection"]
     total = sum(counts(user["history"]).values())
-    lvl, xp = level(total)
+    lvl, xp = age(birth, today) if birth else level(total)  # no birth date: fall back to contribution levels
     current, longest = streaks(user["history"], today)
     return {"login": user["login"], "level": lvl, "xp": xp, "total": total,
             "commits": coll["totalCommitContributions"], "prs": user["pullRequests"]["totalCount"],
