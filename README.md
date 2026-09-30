@@ -37,8 +37,6 @@
 
 <br>
 
-## About Me
-
 <br>
 <div align="center">
   <img src="./hosted files/reading-nook.png" width="700" />
@@ -79,8 +77,6 @@ const developer = {
 </tr>
 </table>
 
-## Technical Skills
-
 <br>
 <div align="center">
   <img src="./hosted files/workbench.png" width="700" />
@@ -113,8 +109,6 @@ const developer = {
 
 </div>
 
-## Learning Focus
-
 <br>
 <div align="center">
   <img src="./hosted files/crystal-owl.png" width="700" />
@@ -141,8 +135,6 @@ const developer = {
 
 </div>
 
-## GitHub Activity
-
 <br>
 <div align="center">
   <img src="./hosted files/enchanted-clearing.png" width="700" />
@@ -168,8 +160,6 @@ const developer = {
 </picture>
 
 </div>
-
-## Connect
 
 <br>
 <div align="center">
