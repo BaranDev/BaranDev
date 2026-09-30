@@ -45,6 +45,7 @@ def test_data():
     assert (s["total"], s["stars"], s["prs"], s["repos"], s["commits"]) == (7, 7, 7, 2, 5)  # 01-05 counted once
     assert len(s["months"]) == 12 and s["months"][0] == ("Feb", 0)            # the 12 months ending this month
     assert s["months"][-1] == ("Jan", 7)                                         # Jan 2026 total, 01-05 counted once
+    assert s["year"] == 2026
 
 
 SAMPLE = {"login": "barandev", "level": 18, "xp": 0.42, "total": 12345, "commits": 85, "prs": 197, "repos": 25, "stars": 12,
@@ -52,7 +53,7 @@ SAMPLE = {"login": "barandev", "level": 18, "xp": 0.42, "total": 12345, "commits
           "quests": [{"name": "a-very-long-repository-name-that-cannot-possibly-fit", "lang": "TypeScript", "days": 0},
                      {"name": "winhub", "lang": "", "days": 36}],
           "months": [(m, n) for m, n in zip("Nov Dec Jan Feb Mar Apr May Jun Jul Aug Sep Oct".split(), (0, 5, 40, 120, 9, 0, 300, 77, 1, 64, 210, 12))],
-          "current": 12, "longest": 40}
+          "current": 12, "longest": 40, "year": 2026}
 
 
 def test_render():

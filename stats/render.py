@@ -147,13 +147,14 @@ def forest(s):
     foot and the month's name floating above it. Returns the animation frames (the month names bob, each a step out of phase)."""
     c = Card("bg-forest.png")
     c.title("Contribution Forest", 8, 4)
+    c.outlined(str(s["year"]), 10, 30, PIXEL, shadow=False)  # small subtitle, same style as the character card's class line
     stats = f"Streak {s['current']:,}   Best {s['longest']:,}   Total {s['total']:,}"
     c.outlined(stats, (W // K - int(c.d.textlength(stats, font=PIXEL))) // 2, 40, PIXEL, shadow=False)
     most = max((n for _, n in s["months"]), default=0) or 1
-    ground, labels = 108, []
+    ground, labels = 112, []
     for i, (label, n) in enumerate(s["months"]):
-        cx = 28 + 22 * i + 11
-        stage = 0 if n == 0 else 1 if n <= most / 3 else 2 if n <= most * 2 / 3 else 3
+        cx = 16 + 24 * i + 12  # 12 slots across the whole grass line
+        stage = 0 if n == 0 else 1 if n <= most * 0.15 else 2 if n <= most * 0.5 else 3  # quiet months stay saplings
         top = c.sprite(TREES[stage], cx, ground) if stage else ground - 2
         num = f"{n:,}"
         c.outlined(num, cx - int(c.d.textlength(num, font=PIXEL)) // 2, ground + 3, PIXEL, shadow=False)

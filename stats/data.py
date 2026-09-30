@@ -124,4 +124,5 @@ def derive(user, today, birth=None):
             "repos": user["repositories"]["totalCount"], "stars": sum(r["stargazerCount"] for r in repos),
             "languages": languages(repos), "quests": quests(repos, user["login"], today),
             "months": months(user["history"], today),
+            "year": today.year,
             "current": current, "longest": longest}
