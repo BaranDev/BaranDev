@@ -149,10 +149,6 @@ const developer = {
 
 <br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=barandev&custom_title=Contribution%20Activity&bg_color=35,0d1a0d,142814,0d1a0d&color=8FBC8F&line=FFD700&point=F5F5E8&area_color=2F5233&area=true&radius=8&hide_border=true" width="98%"/>
-
-<br>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg">
