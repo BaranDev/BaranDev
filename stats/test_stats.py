@@ -2,6 +2,7 @@
 from datetime import date
 
 import data
+import render
 
 
 def day(d, n, lvl="NONE"):
@@ -39,6 +40,27 @@ def test_data():
     assert s["days"] == [(0, 0, 1), (0, 1, 4)]              # 2026-01-04 is a Sunday -> row 0
 
 
+SAMPLE = {"login": "barandev", "level": 18, "xp": 0.42, "total": 12345, "commits": 85, "prs": 197, "repos": 25, "stars": 12,
+          "languages": [("TypeScript", 0.5), ("Python", 0.2), ("JavaScript", 0.15), ("C#", 0.1), ("HTML", 0.05)],
+          "quests": [{"name": "a-very-long-repository-name-that-cannot-possibly-fit", "desc": "x" * 200, "lang": "TypeScript", "days": 0},
+                     {"name": "winhub", "desc": "", "lang": "", "days": 36}],
+          "days": [(c, r, (c * 7 + r) % 5) for c in range(53) for r in range(7)][:368], "current": 12, "longest": 40}
+
+
+def test_render():
+    allowed = render.palette() | {render.GOLD, render.EDGE}
+    for s in (SAMPLE, dict(SAMPLE, languages=[], quests=[])):   # also an account with no languages or repos
+        for fn in (render.character, render.quests, render.forest):
+            im = fn(s)
+            assert im.size == (1600, 640), fn.__name__
+            stray = {c for _, c in im.getcolors(1 << 16)} - allowed
+            assert not stray, (fn.__name__, list(stray)[:5])      # identical style: palette + title colors only
+    d = render.ImageDraw.Draw(render.Image.new("RGB", (1, 1)))
+    t = render.fit(d, SAMPLE["quests"][0]["name"], render.PIXEL, 120)
+    assert t.endswith("...") and d.textlength(t, font=render.PIXEL) <= 120
+
+
 if __name__ == "__main__":
     test_data()
-    print("data ok")
+    test_render()
+    print("all ok")
