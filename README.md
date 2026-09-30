@@ -32,7 +32,7 @@
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-divider.svg" width="100%" />
+  <img src="./hosted files/forest-divider.png" width="100%" />
 </div>
 
 <br>
@@ -53,9 +53,6 @@ const developer = {
   name: 'Cevdet Baran Oral',
   location: 'Famagusta, Cyprus',
   role: 'Full Stack Developer',
-  
-  currentProject: 'Bardforge.com',
-  description: 'AI-powered music platform',
   
   learning: [
     'Machine Learning',
@@ -84,13 +81,13 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-divider.svg" width="100%" />
+  <img src="./hosted files/forest-divider.png" width="100%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./hosted files/forge.svg" width="700" />
+  <img src="./hosted files/workbench.png" width="700" />
 </div>
 
 ## Technical Skills
@@ -124,31 +121,23 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-divider.svg" width="100%" />
+  <img src="./hosted files/forest-divider.png" width="100%" />
 </div>
 
 <br>
-## Current Projects
+
+<div align="center">
+  <img src="./hosted files/reading-nook.png" width="700" />
+</div>
+
+## Learning Focus
 
 <div align="center">
 
 <table>
 <tr>
-<td align="center" width="50%">
+<td align="center">
 
-### **Bardforge**
-**AI-Powered Music Recommendation Platform**
-
-<img src="https://img.shields.io/badge/Status-In_Development-FFD700?style=for-the-badge&labelColor=0d1a0d" />
-<br>
-<img src="https://img.shields.io/badge/Progress-75%25-8FBC8F?style=for-the-badge&labelColor=0d1a0d" />
-
-[**Visit Website**](https://www.bardforge.com)
-
-</td>
-<td align="center" width="50%">
-
-### **Learning Focus**
 **Current Technologies**
 
 - Machine Learning & AI  
@@ -166,13 +155,13 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-divider.svg" width="100%" />
+  <img src="./hosted files/forest-divider.png" width="100%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./hosted files/enchanted-clearing.svg" width="700" />
+  <img src="./hosted files/enchanted-clearing.png" width="700" />
 </div>
 
 ## GitHub Activity
@@ -200,13 +189,13 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-divider.svg" width="100%" />
+  <img src="./hosted files/forest-divider.png" width="100%" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="./hosted files/raven-window.svg" width="400" />
+  <img src="./hosted files/raven-moon.png" width="700" />
 </div>
 
 ## Connect
@@ -230,7 +219,7 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-footer.svg" width="100%" />
+  <img src="./hosted files/forest-footer.png" width="100%" />
 </div>
 
 <div align="center">
