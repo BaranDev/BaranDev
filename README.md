@@ -39,14 +39,15 @@
 
 ## About Me
 
+<br>
+<div align="center">
+  <img src="./hosted files/reading-nook.png" width="700" />
+</div>
+<br>
+
 <table align="center">
 <tr>
-<td width="50%">
-
-<img align="right" width="400" src="./hosted files/coding.gif" />
-
-</td>
-<td width="50%">
+<td>
 
 ```javascript
 const developer = {
@@ -78,19 +79,13 @@ const developer = {
 </tr>
 </table>
 
-<br>
-
-<div align="center">
-  <img src="./hosted files/forest-divider.png" width="100%" />
-</div>
+## Technical Skills
 
 <br>
-
 <div align="center">
   <img src="./hosted files/workbench.png" width="700" />
 </div>
-
-## Technical Skills
+<br>
 
 <div align="center">
 
@@ -118,19 +113,13 @@ const developer = {
 
 </div>
 
-<br>
-
-<div align="center">
-  <img src="./hosted files/forest-divider.png" width="100%" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="./hosted files/reading-nook.png" width="700" />
-</div>
-
 ## Learning Focus
+
+<br>
+<div align="center">
+  <img src="./hosted files/crystal-owl.png" width="700" />
+</div>
+<br>
 
 <div align="center">
 
@@ -152,19 +141,13 @@ const developer = {
 
 </div>
 
-<br>
-
-<div align="center">
-  <img src="./hosted files/forest-divider.png" width="100%" />
-</div>
+## GitHub Activity
 
 <br>
-
 <div align="center">
   <img src="./hosted files/enchanted-clearing.png" width="700" />
 </div>
-
-## GitHub Activity
+<br>
 
 <div align="center">
 
@@ -186,19 +169,13 @@ const developer = {
 
 </div>
 
-<br>
-
-<div align="center">
-  <img src="./hosted files/forest-divider.png" width="100%" />
-</div>
+## Connect
 
 <br>
-
 <div align="center">
   <img src="./hosted files/raven-moon.png" width="700" />
 </div>
-
-## Connect
+<br>
 
 <div align="center">
   
