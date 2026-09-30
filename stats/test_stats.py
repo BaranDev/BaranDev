@@ -34,7 +34,7 @@ def test_data():
     qs = data.quests([repo("BaranDev"), repo("x", desc=None, lang=None, pushed="2026-09-28T23:00:00Z"), repo("y"), repo("z"), repo("w")],
                      "barandev", date(2026, 10, 1))
     assert [q["name"] for q in qs] == ["x", "y", "z"]         # profile repo skipped, 3 max
-    assert qs[0] == {"name": "x", "desc": "", "lang": "", "days": 3}
+    assert qs[0] == {"name": "x", "lang": "", "days": 3}
     user = {"login": "barandev", "pullRequests": {"totalCount": 7},
             "repositories": {"totalCount": 2, "nodes": [repo("a", stars=3), repo("b", stars=4)]},
             "contributionsCollection": {"totalCommitContributions": 5, "contributionCalendar": {"weeks": [
@@ -48,8 +48,8 @@ def test_data():
 
 SAMPLE = {"login": "barandev", "level": 18, "xp": 0.42, "total": 12345, "commits": 85, "prs": 197, "repos": 25, "stars": 12,
           "languages": [("TypeScript", 0.5), ("Python", 0.2), ("JavaScript", 0.15), ("C#", 0.1), ("HTML", 0.05)],
-          "quests": [{"name": "a-very-long-repository-name-that-cannot-possibly-fit", "desc": "x" * 200, "lang": "TypeScript", "days": 0},
-                     {"name": "winhub", "desc": "", "lang": "", "days": 36}],
+          "quests": [{"name": "a-very-long-repository-name-that-cannot-possibly-fit", "lang": "TypeScript", "days": 0},
+                     {"name": "winhub", "lang": "", "days": 36}],
           "days": [(c, r, (c * 7 + r) % 5) for c in range(53) for r in range(7)][:368], "current": 12, "longest": 40}
 
 
@@ -68,6 +68,9 @@ def test_render():
     assert lines[0] == "cevdetbaranoral-"[: len(lines[0])] and 1 < len(lines) <= 3, lines
     assert all(d.textlength(l, font=render.PIXEL) <= 40 for l in lines), lines
     assert render.wrap(d, "winhub", render.PIXEL, 40, 3) == ["winhub"]
+    c = render.Card("bg-character.png")
+    label = c.row("Commits", "12,345", 0, 0, 48)                                 # big numbers must not collide with the label
+    assert d.textlength(label, font=render.PIXEL) + 2 + d.textlength("12,345", font=render.PIXEL) <= 48, label
 
 
 if __name__ == "__main__":

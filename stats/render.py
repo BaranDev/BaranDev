@@ -79,8 +79,12 @@ class Card:
         self.d.text((x, y), fit(self.d, s, PIXEL, max_w) if max_w else s, font=PIXEL, fill=fill)
 
     def row(self, label, value, x, y, w):
+        """Label left, value right-aligned; the label gives way (trimmed with '...') so big numbers never collide."""
+        vw = int(self.d.textlength(value, font=PIXEL))
+        label = fit(self.d, label, PIXEL, w - vw - 2)
         self.text(label, x, y)
-        self.text(value, x + w - int(self.d.textlength(value, font=PIXEL)), y)
+        self.text(value, x + w - vw, y)
+        return label
 
     def bar(self, x, y, w, frac, fill=BAR):
         """Thin bar on parchment: a 2 px track in the parchment's edge color, filled in whole art pixels."""

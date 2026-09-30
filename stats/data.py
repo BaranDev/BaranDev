@@ -10,7 +10,7 @@ MAIN = """query($login: String!) { user(login: $login) {
   login createdAt pullRequests { totalCount }
   repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC,
                orderBy: {field: PUSHED_AT, direction: DESC}) {
-    totalCount nodes { name description stargazerCount pushedAt primaryLanguage { name }
+    totalCount nodes { name stargazerCount pushedAt primaryLanguage { name }
       languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } } }
   contributionsCollection { totalCommitContributions contributionCalendar {
     weeks { contributionDays { date contributionCount contributionLevel } } } } } }"""
@@ -99,8 +99,7 @@ def quests(repos, login, today, n=3):
         if r["name"].lower() == login.lower():
             continue
         pushed = datetime.fromisoformat(r["pushedAt"].replace("Z", "+00:00")).date()
-        out.append({"name": r["name"], "desc": r["description"] or "",
-                    "lang": (r["primaryLanguage"] or {}).get("name", ""), "days": (today - pushed).days})
+        out.append({"name": r["name"], "lang": (r["primaryLanguage"] or {}).get("name", ""), "days": (today - pushed).days})
     return out[:n]
 
 
