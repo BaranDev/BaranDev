@@ -77,6 +77,10 @@ const developer = {
 </tr>
 </table>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/output/character.png" width="700" />
+</div>
+
 <br>
 <div align="center">
   <img src="./hosted files/workbench.png" width="700" />
@@ -133,6 +137,10 @@ const developer = {
 </tr>
 </table>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/output/quests.png" width="700" />
+</div>
+
 </div>
 
 <br>
@@ -143,17 +151,9 @@ const developer = {
 
 <div align="center">
 
-<a href="https://github.com/barandev">
-  <img width="70%" src="https://streak-stats.demolab.com?user=barandev&background=35,0d1a0d,142814,0d1a0d&ring=8FBC8F&fire=FFD700&currStreakLabel=F5F5E8&sideLabels=8FBC8F&dates=4a7a4a&border=2F5233&border_radius=8&currStreakNum=FFD700&sideNums=8FBC8F" />
-</a>
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/barandev/barandev/output/github-contribution-grid-snake.svg">
-</picture>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/output/forest.png" width="700" />
+</div>
 
 </div>
 
