@@ -149,7 +149,7 @@ def forest(s):
     c.title("Contribution Forest", 8, 4)
     c.outlined(str(s["year"]), 10, 30, PIXEL, shadow=False)  # small subtitle, same style as the character card's class line
     stats = f"Streak {s['current']:,}   Best {s['longest']:,}   Total {s['total']:,}"
-    c.outlined(stats, (W // K - int(c.d.textlength(stats, font=PIXEL))) // 2, 40, PIXEL, shadow=False)
+    c.outlined(stats, (W // K - int(c.d.textlength(stats, font=PIXEL))) // 2, 33, PIXEL, shadow=False)
     most = max((n for _, n in s["months"]), default=0) or 1
     ground, labels = 112, []
     for i, (label, n) in enumerate(s["months"]):
