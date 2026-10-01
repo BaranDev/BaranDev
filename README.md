@@ -32,7 +32,7 @@
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-divider.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/forest-divider.png" width="100%" />
 </div>
 
 <br>
@@ -83,7 +83,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="./hosted files/workbench.png" width="700" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/workbench.png" width="700" />
 </div>
 <br>
 
@@ -115,7 +115,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="./hosted files/crystal-owl.png" width="700" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/crystal-owl.png" width="700" />
 </div>
 <br>
 
@@ -145,7 +145,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="./hosted files/enchanted-clearing.png" width="700" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/enchanted-clearing.png" width="700" />
 </div>
 <br>
 
@@ -182,7 +182,7 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="./hosted files/forest-footer.png" width="100%" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/forest-footer.png" width="100%" />
 </div>
 
 <div align="center">
