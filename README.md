@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./hosted files/banner.gif" width="1000" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/banner.webp" width="1000" />
 </div>
 
 <br>
