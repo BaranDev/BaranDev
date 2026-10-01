@@ -39,7 +39,7 @@
 
 <br>
 <div align="center">
-  <img src="./hosted files/reading-nook.png" width="700" />
+  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/reading-nook.png" width="700" />
 </div>
 <br>
 
