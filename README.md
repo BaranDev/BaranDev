@@ -78,7 +78,26 @@ const developer = {
 </table>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/output/character.png" width="700" />
+  <a href="https://github.com/BaranDev/questlog-github-stats">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cevdetbaran.com/stats?user=BaranDev&scene=forest&subtitle=Full+Stack+Developer&time=night">
+      <img alt="BaranDev's Character Sheet" src="https://questlog.cevdetbaran.com/stats?user=BaranDev&scene=forest&subtitle=Full+Stack+Developer&time=day" width="700" />
+    </picture>
+  </a>
+  <br>
+  <a href="https://github.com/BaranDev/questlog-github-stats">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cevdetbaran.com/languages?user=BaranDev&scene=forest&time=night">
+      <img alt="BaranDev's Spellbook" src="https://questlog.cevdetbaran.com/languages?user=BaranDev&scene=forest&time=day" width="700" />
+    </picture>
+  </a>
+  <br>
+  <a href="https://github.com/BaranDev/questlog-github-stats">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cevdetbaran.com/streak?user=BaranDev&scene=forest&time=night">
+      <img alt="BaranDev's Campfire" src="https://questlog.cevdetbaran.com/streak?user=BaranDev&scene=forest&time=day" width="700" />
+    </picture>
+  </a>
 </div>
 
 <br>
