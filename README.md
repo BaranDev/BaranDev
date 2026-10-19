@@ -201,7 +201,7 @@ const developer = {
 <br>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/forest-footer.png" width="100%" />
+  <img alt="" src="https://questlog.cc/decorations/forest-footer" width="100%" />
 </div>
 
 <div align="center">
