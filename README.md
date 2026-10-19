@@ -134,7 +134,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/crystal-owl.png" width="700" />
+  <img alt="Learning Focus" src="https://questlog.cc/decorations/crystal-owl?title=Learning%20Focus" width="700" />
 </div>
 <br>
 
