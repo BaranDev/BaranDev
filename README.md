@@ -32,14 +32,14 @@
 <br>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/forest-divider.png" width="100%" />
+  <img alt="" src="https://questlog.cc/decorations/forest-divider" width="100%" />
 </div>
 
 <br>
 
 <br>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/reading-nook.png" width="700" />
+  <img alt="About Me" src="https://questlog.cc/decorations/reading-nook?title=About%20Me" width="700" />
 </div>
 <br>
 
@@ -80,29 +80,29 @@ const developer = {
 <div align="center">
   <a href="https://github.com/BaranDev/questlog-github-stats">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cevdetbaran.com/stats?user=BaranDev&scene=forest&subtitle=Full+Stack+Developer&time=night">
-      <img alt="BaranDev's Character Sheet" src="https://questlog.cevdetbaran.com/stats?user=BaranDev&scene=forest&subtitle=Full+Stack+Developer&time=day" width="700" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cc/stats?user=BaranDev&scene=forest&subtitle=Full+Stack+Developer&time=night">
+      <img alt="BaranDev's Character Sheet" src="https://questlog.cc/stats?user=BaranDev&scene=forest&subtitle=Full+Stack+Developer&time=day" width="700" />
     </picture>
   </a>
   <br>
   <a href="https://github.com/BaranDev/questlog-github-stats">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cevdetbaran.com/languages?user=BaranDev&scene=forest&time=night">
-      <img alt="BaranDev's Spellbook" src="https://questlog.cevdetbaran.com/languages?user=BaranDev&scene=forest&time=day" width="700" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cc/languages?user=BaranDev&scene=forest&time=night">
+      <img alt="BaranDev's Spellbook" src="https://questlog.cc/languages?user=BaranDev&scene=forest&time=day" width="700" />
     </picture>
   </a>
   <br>
   <a href="https://github.com/BaranDev/questlog-github-stats">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cevdetbaran.com/streak?user=BaranDev&scene=forest&time=night">
-      <img alt="BaranDev's Campfire" src="https://questlog.cevdetbaran.com/streak?user=BaranDev&scene=forest&time=day" width="700" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://questlog.cc/streak?user=BaranDev&scene=forest&time=night">
+      <img alt="BaranDev's Campfire" src="https://questlog.cc/streak?user=BaranDev&scene=forest&time=day" width="700" />
     </picture>
   </a>
 </div>
 
 <br>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/workbench.png" width="700" />
+  <img alt="Technical Skills" src="https://questlog.cc/decorations/workbench?title=Technical%20Skills" width="700" />
 </div>
 <br>
 
@@ -164,7 +164,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/enchanted-clearing.png" width="700" />
+  <img alt="GitHub Activity" src="https://questlog.cc/decorations/enchanted-clearing?title=GitHub%20Activity" width="700" />
 </div>
 <br>
 
@@ -178,7 +178,7 @@ const developer = {
 
 <br>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/BaranDev/BaranDev/main/hosted%20files/raven-moon.png" width="700" />
+  <img alt="Connect" src="https://questlog.cc/decorations/raven-moon?title=Connect" width="700" />
 </div>
 <br>
 
